@@ -1,4 +1,4 @@
-# Constructor Soft
+# Constructor Soft - (Em Desenvolvimento)
 Gerenciador de gasto pessoal, feito orgulhosamente com Angular, Sculptor e Firebase
 ###Tela de Login
 ![login](http://ap.imagensbrasil.org/images/2017/02/23/login.png)
