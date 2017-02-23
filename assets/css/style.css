@@ -1,0 +1,25 @@
+.border-red{
+	border-color: #f00;
+}
+.error{
+	color: #f00;
+}
+.padding{
+	margin-left: 10px;
+}
+.cl-green{
+	color: rgb(22,205,22);
+}
+.fixed{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: auto;
+	height: auto;
+	background: rgba(0,0,0,.5);
+}
+.bg-white{
+	background: rgb(255,255,255);
+}

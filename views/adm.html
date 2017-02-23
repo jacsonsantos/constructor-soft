@@ -1,0 +1,74 @@
+<div>
+	<h1 class="textCenter">Constructor Soft | Admin</h1>
+	<div class="grid">
+    	<div class="column s6 sOff3">
+        <div class="textRight"><a ui-sref="notification" title="Notification"><i class="fa fa-bell" aria-hidden="true"></i></a><a ui-sref="app" class="padding" title="Sign Out"><i class="fa fa-times" aria-hidden="true"></i></a></div>
+        <div>
+    		<h2 ng-dblclick="oninput = true">
+                <small>Balance: </small> <span>{{ user.balance }}</span>
+                <input ng-if="oninput" placeholder="New value here" type="text" class="formControl" ng-click="{{ balance = user.balance }}" ng-model="balance" ng-change="user.balance = balance">
+                <span  ng-if="oninput">
+                <button class="button success small" ng-click="save()">Save</button>
+                </span>
+            </h2>
+            <h3><small>Spent: </small> <span>{{ user.spent }}</span></h3>
+            <h4><small>Available: </small> <span>{{ user.available }}</span></h4>
+        </div>
+        <div class="textRight">
+            <button class="button" ng-click="new()">New Note</button>
+        </div>
+        <div>
+            <table class="table striped">
+                <tbody>
+                <tr>
+                    <th align="left">Date</th>
+                    <th align="left">Title</th>
+                    <th align="right">Maturity</th>
+                    <th align="right">Price</th>
+                </tr>
+                <tr ng-repeat="data in datas">
+                    <td align="left">{{ data.date }}</td>
+                    <td align="left">{{ data.title }}</td>
+                    <td align="right">{{ data.maturity }}</td>
+                    <td align="right">{{ data.price }}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        </div>
+	</div>
+</div>
+<div class="fixed" ng-if="newnote">
+    <div style="margin-top: 25px;">
+        <div class="grid">
+            <div class="column s6 sOff3 bg-white">
+                <h1 class="textCenter">New Note</h1>
+                <div>
+                    <label>Title</label>
+                    <input type="text" name="" class="formControl" ng-model="note.title">
+                </div>
+                <div class="flexRow">
+                    <div class="column s12 m4">
+                        <div>
+                            <label>Maturity</label>
+                            <input type="date" name="" class="formControl" ng-model="note.maturity">
+                        </div>
+                    </div>
+                    <div class="column s12 m4">
+                        <div>
+                            <label>Price</label>
+                            <input type="text" name="" class="formControl" ng-model="note.price" placeholder="0,00">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <label>Description</label>
+                    <textarea class="formControl" row="5" ng-model="note.description"></textarea>
+                </div>
+                <div class="textRight">
+                    <button class="button success" ng-click="saveNote(note)">Save</button>
+                </div><br>
+            </div>
+        </div>
+    </div>
+</div>

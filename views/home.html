@@ -1,0 +1,15 @@
+<div>
+	<h1 class="textCenter">Constructor Soft | Home</h1>
+	<div class="grid">
+    	<div class="column s6 sOff3">
+    		<label class="">Username or Email</label><span ng-if="errorEmail" class="error padding">Error Email</span>
+        	<input type="email" name="email" ng-model="email" ng-click="errorEmail=false" class="formControl" ng-class="{'border-red':errorEmail}" placeholder="Username or Email">
+        	<label class="">Password</label><span ng-if="errorPass" class="error padding">Error Password</span>
+        	<input type="password" name="password" ng-model="password" ng-click="errorPass=false" class="formControl" ng-class="{'border-red':errorPass}" placeholder="Password">
+        	<div class="textRight">
+        		<a ui-sref="forgot">Forgot password</a>
+        	</div>
+        	<button class="button" ng-click="signin(email,password)">Sign In</button>
+    	</div>
+	</div>
+</div>
